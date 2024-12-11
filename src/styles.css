@@ -1,0 +1,28 @@
+/* Global styles */
+/* Place this in src/styles.css */
+.form-floating > input ~ label {
+  /* Global styles */
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-image: url('/assets/images/auto2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: auto; /* Allows scrolling */
+    background-attachment: fixed; /* Keeps the background fixed during scroll or modal appearance */
+}
+
+/* SweetAlert2 Popup */
+.swal2-popup {
+    z-index: 9999 !important; /* Ensure SweetAlert2 stays above other content */
+}
+
+/* SweetAlert2 Overlay */
+.swal2-overlay {
+    background-color: rgba(0, 0, 0, 0.4) !important; /* Optional: Adjust overlay color */
+    z-index: 9998 !important; /* Ensure overlay stays below the popup */
+}

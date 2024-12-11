@@ -1,0 +1,90 @@
+<div class="container my-2">
+  <div class="card shadow-lg">
+    <div class="card-header text-center bg-success text-white">
+      <h2>User Registration</h2>
+    </div>
+    <div class="card-body">
+      <form #register="ngForm" (ngSubmit)="registerForm(register.value)">
+        
+        <!-- First Name Input -->
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" class="form-control" placeholder="Enter your first name" 
+                   name="firstName" [(ngModel)]="user.firstName" required />
+          </div>
+          
+          <!-- Last Name Input -->
+          <div class="form-group col-md-12">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" class="form-control" placeholder="Enter your last name" 
+                   name="lastName" [(ngModel)]="user.lastName" required />
+          </div>
+        </div>
+
+        <!-- Gender Input -->
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="gender">Gender</label>
+            <select id="gender" class="form-control" style="color: #595c5f;" name="gender" [(ngModel)]="user.gender" required>
+              <option value="" disabled>Select your gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Email Input -->
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email" 
+                   name="email" [(ngModel)]="user.email" required />
+          </div>
+        </div>
+
+        <!-- Password Input -->
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Enter password" 
+                   name="password" [(ngModel)]="user.password" required />
+          </div>
+
+          <!-- Confirm Password Input -->
+          <div class="form-group col-md-12">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm password" 
+                   name="confirmPassword" [(ngModel)]="user.confirmPassword" required />
+          </div>
+        </div>
+
+        <!-- Phone Number Input -->
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="number">Phone Number</label>
+            <input type="text" id="number" class="form-control" placeholder="Enter your phone number" 
+                   name="number" [(ngModel)]="user.number" required />
+          </div>
+        </div>
+
+        <!-- Register Button -->
+        <div class="form-row justify-content-center mt-12">
+          <button type="submit" class="btn btn-success btn-lg">Register</button>
+        </div>
+      </form>
+
+  <!-- Registration Link -->
+  <div class="text-center mt-3">
+    <p>Don't have an account? <a routerLink="/login">Login </a></p>
+</div>
+      <!-- Social Media Icons -->
+      <div class="text-center mt-4">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+/* Custom Styles for the Bookings Table */
+.table {
+    border-radius: 8px; /* Rounded corners for the table */
+    overflow: hidden; /* Prevents overflow for rounded corners */
+}
+
+.thead-dark {
+    background-color: #343a40; /* Dark background for the header */
+    color: white; /* White text color */
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6; /* Light border color */
+}
+
+/* Add some spacing and styling to the badges */
+.badge {
+    font-size: 0.85rem; /* Slightly smaller font size */
+    padding: 0.5rem 0.75rem; /* Padding for better appearance */
+}
+
+.badge-success {
+    background-color: #28a745; /* Green for successful bookings */
+    color: white;
+}
+
+.badge-danger {
+    background-color: #dc3545; /* Red for failed bookings */
+    color: white;
+}
+
+.badge-warning {
+    background-color: #ffc107; /* Yellow for pending bookings */
+    color: black;
+}
+
+/* Responsive table */
+.table-responsive {
+    margin-top: 20px; /* Margin for better spacing */
+}
+
+/* For mobile devices */
+@media (max-width: 576px) {
+    .table th,
+    .table td {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+}
+
+
+.card-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.previous{
+    font-size: x-large;
+}

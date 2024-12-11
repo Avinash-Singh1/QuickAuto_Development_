@@ -1,0 +1,102 @@
+.ticket-management {
+  padding: 20px;
+}
+
+.table-container {
+  overflow-x: auto; /* Enable horizontal scrolling for the table on small screens */
+}
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.btn-danger {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .table thead {
+      display: none; /* Hide table headers on small screens */
+  }
+
+  .table tbody tr {
+      display: block;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+  }
+
+  .table tbody td {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      text-align: left;
+      border: none;
+  }
+
+  .table tbody td:before {
+      content: attr(data-label);
+      font-weight: bold;
+      margin-right: 10px;
+      color: #333;
+  }
+
+  .table tbody td:nth-of-type(1)::before {
+      content: "ID";
+  }
+
+  .table tbody td:nth-of-type(2)::before {
+      content: "Title";
+  }
+
+  .table tbody td:nth-of-type(3)::before {
+      content: "Description";
+  }
+
+  .table tbody td:nth-of-type(4)::before {
+      content: "Status";
+  }
+
+  .table tbody td:nth-of-type(5)::before {
+      content: "Actions";
+  }
+
+  select {
+      width: 100%; /* Ensure dropdowns span full width on small screens */
+  }
+
+  .btn-danger {
+      width: 100%; /* Ensure buttons span full width for easy tapping */
+  }
+}

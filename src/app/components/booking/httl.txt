@@ -1,0 +1,92 @@
+<!-- <app-navbar/> -->
+<div class="container my-2">
+  <div class="card shadow-lg">
+    <div class="back-button card-header text-center bg-primary text-white position-relative">
+      <button class=" btn btn-outline-light position-absolute" style="left: 20px; top: 10px;" (click)="goBack()">
+        <i class="fas fa-arrow-left"></i> Back
+      </button>
+      <h2>Travel Auto Booking</h2>
+    </div>
+    <div class="card-body">
+      <!-- Add ngForm and ngSubmit -->
+      <!-- <form #bookingForm="ngForm" (ngSubmit)="SubmitBookinginfo(bookingForm.value)"> -->
+      <form #bookingForm="ngForm" (ngSubmit)="SubmitFormData(bookingForm.value)">
+        <!-- Source and Destination Dropdown -->
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="source">Source</label>
+            <input
+              id="source"
+              type="text"
+              class="myinputfields form-control"
+              name="source"
+              placeholder="select source from Map"
+              [(ngModel)]="booking.source"
+              required readonly
+            />
+          </div>
+          <div class="form-group col-md-12">
+            <label for="destination">Destination</label>
+            <input
+              id="destination"
+              type="text"
+              class="myinputfields form-control"
+              name="destination"
+              placeholder="select Destination from Map"
+              [(ngModel)]="booking.destination"
+              required readonly
+            />
+          </div>
+          <div class="form-group col-md-12">
+            <label for="fare">Fare</label>
+            <input
+              id="fare"
+              type="text"
+              class="myinputfields form-control"
+              name="fare"
+              placeholder="select Fare from Map"
+              [(ngModel)]="booking.fare"
+              required readonly
+            />
+          </div>
+          <div class="form-group col-md-12">
+            <label for="distance">Distance</label>
+            <input
+              id="distance"
+              type="text"
+              class="myinputfields form-control"
+              name="distance"
+              placeholder="select Distance from Map"
+              [(ngModel)]="booking.distance"
+              required readonly
+            />
+          </div>
+        </div>
+
+        <!-- Date and Time Picker -->
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="travelDate">Travel Date</label>
+            <input type="date" id="travelDate" class="form-control" name="travelDate" [(ngModel)]="booking.travelDate" required />
+          </div>
+
+          <div class="form-group col-md-12">
+            <label for="travelTime">Travel Time</label>
+            <input type="time" id="travelTime" class="myinputfields form-control" name="travelTime" [(ngModel)]="booking.travelTime" (change)="onTimeChange($event)" required />
+          </div>
+
+          <!-- Display the converted time -->
+          <div class="form-group col-md-12">
+            <label>Converted Time (12-hour format):</label>
+            <div>{{ formattedTime }}</div>
+          </div>
+        </div>
+
+        <!-- Proceed to Pay Button -->
+        <div class="form-row justify-content-center mt-4">
+          <button type="submit" class="btn btn-success btn-lg" [disabled]="!bookingForm.valid">Proceed to Pay</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

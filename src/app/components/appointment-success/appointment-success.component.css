@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.confirmation-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #4caf50;
+    font-size: 2.5rem;
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: #777;
+}
+
+.details {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.details h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.details ul {
+    list-style: none;
+}
+
+.details li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.details li:last-child {
+    border-bottom: none;
+}
+
+.details strong {
+    color: #4caf50;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #4caf50;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+.btn-secondary {
+    background-color: #f44336;
+}
+
+.btn-secondary:hover {
+    background-color: #e53935;
+}
+
+@media (max-width: 600px) {
+    .confirmation-card {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,56 @@
+/* Custom Navbar Styles */
+.navbar {
+  transition: background-color 0.3s ease;
+  padding: 15px 20px; /* Add padding for larger navbar */
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+  font-size: 18px; /* Increase font size */
+  padding: 10px 15px; /* Increase padding for larger clickable area */
+}
+
+.nav-link:hover {
+  color: #f8f9fa; /* Change text color on hover */
+  background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+  border-radius: 5px; /* Slightly round the corners */
+}
+
+.nav-link.active {
+  color: #eeece7; /* Active link color */
+  font-weight: bold; /* Make active link bold */
+}
+
+.navbar-toggler {
+  border: none; /* Remove border */
+}
+
+.navbar-toggler:focus {
+  outline: none; /* Remove focus outline */
+}
+
+/* Search Input and Button Styles */
+.form-control {
+  background-color: rgba(255, 255, 255, 0.2); /* Light background */
+  border: none; /* Remove border */
+  color: white; /* Text color */
+  height: 40px; /* Increase input height */
+}
+
+.form-control::placeholder {
+  color: #f8f9fa; /* Placeholder color */
+}
+
+.btn-outline-light {
+  border-color: white; /* Border color */
+  transition: background-color 0.3s ease; /* Transition for button */
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+.navbar {
+  position: relative;
+  z-index: 1000; /* Ensure navbar is above other elements */
+}

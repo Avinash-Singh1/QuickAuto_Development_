@@ -1,0 +1,38 @@
+<!-- settings.component.html -->
+<div class="settings-container">
+    <h2>User Settings</h2>
+    <form (ngSubmit)="updateSettings()">
+      <div class="form-group">
+        <label>
+          <input
+            type="checkbox"
+            [(ngModel)]="settings.notifications"
+            name="notifications"
+          />
+          Enable Notifications
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <input
+            type="checkbox"
+            [(ngModel)]="settings.darkMode"
+            name="darkMode"
+          />
+          Enable Dark Mode
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <input
+            type="checkbox"
+            [(ngModel)]="settings.autoBooking"
+            name="autoBooking"
+          />
+          Enable Auto Booking
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Save Settings</button>
+    </form>
+  </div>
+  

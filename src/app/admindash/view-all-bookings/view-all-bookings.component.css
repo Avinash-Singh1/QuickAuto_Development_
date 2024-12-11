@@ -1,0 +1,127 @@
+.view-bookings-container {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  overflow-x: auto; /* Prevent horizontal scrolling of the entire container */
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+
+.table-container {
+  overflow-x: auto; /* Allow horizontal scrolling for the table only */
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.bookings-table th,
+.bookings-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.bookings-table th {
+  background-color: #333;
+  color: white;
+}
+
+.bookings-table td {
+  background-color: white;
+}
+
+.action-btn {
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.view-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.view-btn:hover {
+  background-color: #45a049;
+}
+
+.edit-btn {
+  background-color: #2196f3;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #1976d2;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bookings-table thead {
+      display: none; /* Hide table headers on small screens */
+  }
+
+  .bookings-table tbody tr {
+      display: block;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+  }
+
+  .bookings-table tbody td {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      text-align: left;
+      border: none;
+  }
+
+  .bookings-table tbody td:before {
+      content: attr(data-label);
+      font-weight: bold;
+      margin-right: 10px;
+      color: #333;
+  }
+
+  .bookings-table tbody td:nth-of-type(1)::before {
+      content: "#";
+  }
+
+  .bookings-table tbody td:nth-of-type(2)::before {
+      content: "Booking ID";
+  }
+
+  .bookings-table tbody td:nth-of-type(3)::before {
+      content: "User";
+  }
+
+  .bookings-table tbody td:nth-of-type(4)::before {
+      content: "Date";
+  }
+
+  .bookings-table tbody td:nth-of-type(5)::before {
+      content: "Status";
+  }
+
+  .bookings-table tbody td:nth-of-type(6)::before {
+      content: "Actions";
+  }
+}

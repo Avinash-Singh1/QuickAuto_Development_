@@ -1,0 +1,33 @@
+<div class="analytics-container">
+    <h2 class="heading">Analytics Dashboard</h2>
+  
+    <div class="analytics-cards-container">
+      <!-- Total Users Card -->
+      <div class="analytics-card">
+        <h3>Total Users</h3>
+        <p>{{ totalUsers }}</p>
+      </div>
+  
+      <!-- Total Revenue Card -->
+      <div class="analytics-card">
+        <h3>Total Revenue</h3>
+        <p>₹{{ totalRevenue | number }}</p>
+      </div>
+  
+      <!-- Bookings Made Card -->
+      <div class="analytics-card">
+        <h3>Total Bookings</h3>
+        <p>{{ totalBookings }}</p>
+      </div>
+    </div>
+  
+    <!-- Charts Section -->
+    <div class="charts-section">
+      <h3>User Activity Over Time</h3>
+      <canvas id="userActivityChart"></canvas>
+  
+      <h3>Revenue Trends</h3>
+      <canvas id="revenueChart"></canvas>
+    </div>
+  </div>
+  

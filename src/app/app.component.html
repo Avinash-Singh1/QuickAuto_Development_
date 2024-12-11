@@ -1,0 +1,26 @@
+<!-- Admin Navbar (shown only when isAdmin is true and showNav is true) -->
+<app-adminnavbar *ngIf="isAdmin && showNav"></app-adminnavbar>
+
+<!-- User Navbar (shown only when isAdmin is false and showNav is true) -->
+<app-navbar *ngIf="!isAdmin && showNav"></app-navbar>
+
+<!-- Main Content -->
+<app-loader></app-loader>
+<router-outlet></router-outlet>
+
+<!-- Bottom Menu (shown only when showNav is true) -->
+<nav class="bottom-menu" *ngIf="showNav && isAdmin; else elseTemplate">
+    <a routerLink="/admindash" title="Home"><i class="fas fa-home"></i></a>
+    <a routerLink="/viewallbookings" title="Book"><i class="fas fa-book"></i></a>
+    <!-- <a routerLink="/courier" title="Auto"><i class="fas fa-car"></i></a> -->
+    <a routerLink="/openSettings" title="Help"><i class="fas fa-question-circle"></i></a> 
+</nav>
+
+<ng-template #elseTemplate>
+    <nav class="bottom-menu" *ngIf="showNav">
+        <a routerLink="/dash" title="Home"><i class="fas fa-home"></i></a>
+        <a routerLink="/history" title="Book"><i class="fas fa-book"></i></a>
+        <a routerLink="/courier" title="Auto"><i class="fas fa-car"></i></a>
+        <a routerLink="/FAQs" title="Help"><i class="fas fa-question-circle"></i></a> 
+    </nav>
+</ng-template>

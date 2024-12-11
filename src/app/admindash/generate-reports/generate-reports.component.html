@@ -1,0 +1,26 @@
+<div class="generate-reports-container">
+    <h2 class="heading">Generate Reports</h2>
+  
+    <div class="report-type-section">
+      <label for="reportType">Select Report Type:</label>
+      <select id="reportType" [(ngModel)]="selectedReportType">
+        <option value="bookings">Bookings Report</option>
+        <option value="users">Users Report</option>
+        <option value="payments">Payments Report</option>
+        <option value="feedback">Feedback Report</option>
+      </select>
+    </div>
+  
+    <div class="report-actions">
+      <button class="generate-btn" (click)="generateReport()">Generate Report</button>
+      <button class="download-btn" *ngIf="reportGenerated" (click)="downloadReport()">Download Report</button>
+    </div>
+  
+    <div *ngIf="reportGenerated" class="report-summary">
+      <h3>Report Summary</h3>
+      <p><strong>Report Type:</strong> {{ selectedReportType | titlecase }}</p>
+      <p><strong>Date:</strong> {{ reportDate | date:'fullDate' }}</p>
+      <p><strong>Status:</strong> Ready for download</p>
+    </div>
+  </div>
+  

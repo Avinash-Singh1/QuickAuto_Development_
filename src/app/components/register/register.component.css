@@ -1,0 +1,58 @@
+.social-icon {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 2rem; /* Size of social media icons */
+    color: #333; /* Color of icons */
+    text-decoration: none; /* Remove underline */
+}
+
+.social-icon:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.container {
+    max-width: 600px;
+  }
+  
+  .card {
+    border-radius: 15px;
+    /* background-color: #007bff; */
+  }
+  
+  .card-header {
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .form-group label {
+    font-size: 1.2rem; 
+    margin: 6px;
+  }
+  
+  button {
+    width: 100%;
+  }
+
+@media (max-width: 576px) {
+    .card {
+        height: auto; /* Adjust height to auto for smaller screens */
+        margin: 0; /* Remove top margin to center vertically */
+        padding: 5px; /* Add padding inside the card */
+    }
+
+    .form-group label {
+        font-size: 1.2rem; 
+         /* adjust label font size */
+    }
+
+    .form-control {
+        font-size: 1.2rem; /* Adjust input font size */
+    }
+
+    button {
+        font-size: 1.2rem; /* Adjust button font size */
+    }
+
+    .container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}

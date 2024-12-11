@@ -1,0 +1,80 @@
+/* Padding or margin for the bottom to prevent button overlap */
+.container {
+  padding-bottom: 80px; /* Space for the bottom menu */
+}
+
+.submit-button-wrapper {
+  position: sticky; /* Make the button sticky */
+  bottom: 80px; /* Adjust based on your bottom menu height */
+  z-index: 1500; /* Ensure it’s above other elements */
+}
+
+@media (max-width: 576px) {
+.container {
+    padding: 10px; /* Add some padding for smaller screens */
+    padding-bottom: 80px; /* Space for bottom menu */
+}
+
+.card {
+    border-radius: 10px; /* Keep rounded corners */
+    margin: 0; /* Remove margins for full-width cards */
+}
+
+.card-header h2 {
+    margin-top: 55px; /* Ensure heading has space above */
+    font-size: 1.5rem; /* Adjust heading size */
+    margin-bottom: 0px;
+}
+
+.myinputfields {
+    height: 50px; /* Adjust height for input fields */
+    font-size: 0.9rem; /* Slightly smaller font for inputs */
+}
+
+.btn {
+    width: 90%; /* Full-width button for better touch targets */
+    font-size: 1rem; /* Increase button font size for readability */
+    padding: 12px; /* Increase padding for better touch */
+}
+label{font-weight: 420;}
+
+.form-row {
+    margin-bottom: 15px; /* Space between form rows */
+}
+
+/* Adjust for the sticky button */
+.submit-button-wrapper {
+    bottom: 70px; /* Adjust this based on your footer or navbar height */
+}
+}
+.scrollable-form-container {
+  max-height: 100vh; /* Adjust this based on available space */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding: 15px; /* Optional padding for inner spacing */
+}
+.backbtn{
+  left: 20px; 
+  top: 5px;
+}
+
+@media (max-width: 576px) {
+  .scrollable-form-container {
+      max-height: 75vh; /* Adjust height for smaller screens */
+  }
+  .box{
+    height: 65px;
+  }
+
+  .submitbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .fare_and_distance{
+      display: flex;
+      gap: 4px;
+    }
+}
+
+
+

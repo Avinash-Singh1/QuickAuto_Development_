@@ -1,0 +1,34 @@
+
+  <app-navbar />
+  <div class="container" >
+    <div class="row" style="margin-top: -30px;">
+      <!-- Input Fields -->
+      <input type="text" placeholder="Enter Source" [(ngModel)]="source" (input)="onSourceInput()" />
+      <div *ngIf="sourceSuggestions.length > 0" class="autocomplete-list">
+        <div *ngFor="let suggestion of sourceSuggestions" class="autocomplete-item" (click)="selectSource(suggestion)">
+          {{ suggestion.description }}
+        </div>
+      </div>
+  
+      <input type="text" placeholder="Enter Destination" [(ngModel)]="destination" (input)="onDestinationInput()" />
+      <div *ngIf="destinationSuggestions.length > 0" class="autocomplete-list2">
+        <div *ngFor="let suggestion of destinationSuggestions" class="autocomplete-item" (click)="selectDestination(suggestion)">
+          {{ suggestion.description }}
+        </div>
+      </div>
+      <div class="btndiv d-flex justify-content-around">
+
+          <button (click)="getDirections()">Search</button>
+          <button (click)="FillAllDetails()">Book</button>
+      
+      </div>
+      <!-- Google Map -->
+      <div class="map-container">
+        <google-map [options]="options" height="100%" width="100%">
+          <map-marker *ngFor="let marker of markers" [position]="marker.position" [label]="marker.label"></map-marker>
+          <map-polyline [path]="polyline?.path" [options]="polyline"></map-polyline>
+        </google-map>
+      </div>
+    </div>
+  </div>
+  

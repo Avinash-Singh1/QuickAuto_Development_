@@ -1,0 +1,108 @@
+<div class="container mt-4">
+  <div class="options row text-center" >
+    <!-- Plan Your Journey -->
+    <div class="col-4 mb-3">
+      <button class="service-btn1 w-100" (click)="PlanJourney()">
+        <div class="service-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div>Plan Your Journey</div>
+      </button>
+    </div>
+
+    <!-- Book QR Ticket -->
+    <div class="col-4 mb-3" (click)="CommingSoon()">
+      <button class="service-btn w-100">
+        <div class="service-icon">
+          <i class="fas fa-ticket-alt"></i>
+        </div>
+        <div>Book QR Ticket</div>
+      </button>
+    </div>
+
+    <!-- Smart Card Top-Up -->
+    <div class="col-4 mb-3" (click)="CommingSoon()">
+      <button class="service-btn w-100">
+        <div class="service-icon">
+          <i class="fas fa-credit-card"></i>
+        </div>
+        <div>Smart Card Top-Up</div>
+      </button>
+    </div>
+
+    <!-- Rent A Locker -->
+    <div class="col-4 mb-3" (click)="CommingSoon()">
+      <button class="service-btn w-100">
+        <div class="service-icon">
+          <i class="fas fa-lock"></i>
+        </div>
+        <div>Rent A Locker</div>
+      </button>
+    </div>
+
+    <!-- Book Bike Ride -->
+    <div class="col-4 mb-3" (click)="CommingSoon()">
+      <button class="service-btn w-100">
+        <div class="service-icon">
+          <i class="fas fa-bicycle"></i>
+        </div>
+        <div>Book Bike Ride</div>
+      </button>
+    </div>
+
+    <!-- QR Wallet -->
+    <div class="col-4 mb-3" (click)="CommingSoon()">
+      <button class="service-btn w-100">
+        <div class="service-icon">
+          <i class="fas fa-wallet"></i>
+        </div>
+        <div>QR Wallet</div>
+      </button>
+    </div>
+
+    <!-- Multiple Journey QR Ticket -->
+    <div class="col-4 mb-3" (click)="CommingSoon()">
+      <button class="service-btn w-100">
+        <div class="service-icon">
+          <i class="fas fa-ticket-alt"></i>
+        </div>
+        <div>Multiple Journey QR </div>
+      </button>
+    </div>
+
+    <!-- Book Train Tickets -->
+    <div class="col-4 mb-3" (click)="CommingSoon()">
+      <button class="service-btn w-100">
+        <div class="service-icon">
+          <i class="fas fa-train"></i>
+        </div>
+        <div>Book Train Tickets</div>
+      </button>
+    </div>
+
+    <!-- Fare Calculator -->
+    <div class="col-4 mb-3" (click)="CommingSoon()">
+      <button class="service-btn w-100">
+        <div class="service-icon">
+          <i class="fas fa-calculator"></i>
+        </div>
+        <div>Fare Calculator</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Wallet Section -->
+  <div class="wallet-section text-center text-white " style="background-color: #6841b2;">
+    <h4>Wallet Balance</h4>
+    <p>{{user_mobile}}</p>
+    <h3>₹ 0.00</h3>
+  </div>
+</div>
+
+<!-- Bottom Navigation -->
+<div class="bottom-nav text-center">
+  <a href="#" class="nav-link">Home</a>
+  <a href="#" class="nav-link">Ticket</a>
+  <a href="#" class="nav-link">E-Comm</a>
+  <a href="#" class="nav-link">Lockers</a>
+</div>

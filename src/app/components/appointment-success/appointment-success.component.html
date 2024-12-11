@@ -1,0 +1,32 @@
+<div class="container bg-info">
+    <div class="confirmation-card">
+        <div class="header">
+            <h1>Appointment Confirmed!</h1>
+            <p>Thank you for booking with us, {{ user.username }}.</p>
+        </div>
+        <div class="details" id="print-section">
+            <h2>User Details</h2>
+            <ul>
+                <li><strong>Name: </strong> <span>{{ user.username }}</span></li>
+                <li><strong>Email: </strong> <span>{{ user.email }}</span></li>
+                <li><strong>Mobile: </strong> <span>{{ user.mobile }}</span></li>
+            </ul>
+
+            <h2>Appointment Details</h2>
+            <ul>
+                <li><strong>Appointment ID: </strong> <span>{{ appointment.uniqueId }}</span></li>
+                <li><strong>Source: </strong> <span>{{ appointment.source }}</span></li>
+                <li><strong>Destination: </strong> <span>{{ appointment.destination }}</span></li>
+                <li><strong>Travel Date: </strong> <span>{{ appointment.travelDate }}</span></li>
+                <li><strong>Travel Time: </strong> <span>{{ appointment.travelTime }}</span></li>
+                <li><strong>Fare: </strong> <span>{{ appointment.fare }}</span></li>
+                <li><strong>Distance: </strong> <span>{{ appointment.distance }}</span></li>
+            </ul>
+        </div>
+        <div class="footer">
+            <button class="btn btn-success" (click)="printPDF()">Print Details</button>
+            <a class="btn btn-primary" (click)="goHome()">Go to Home</a>
+            <a routerLink="/manage-appointment" class="btn btn-secondary">Manage Appointment</a>
+        </div>
+    </div>
+</div>

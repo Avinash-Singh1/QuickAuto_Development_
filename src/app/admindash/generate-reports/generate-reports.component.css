@@ -1,0 +1,57 @@
+.generate-reports-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .heading {
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+  }
+  
+  .report-type-section {
+    margin-bottom: 20px;
+  }
+  
+  .report-type-section label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .report-type-section select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  .report-actions {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .generate-btn, .download-btn {
+    background-color: #56c728;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .generate-btn:hover, .download-btn:hover {
+    background-color: #4caf50;
+  }
+  
+  .report-summary {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  

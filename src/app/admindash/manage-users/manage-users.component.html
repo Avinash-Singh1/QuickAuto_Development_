@@ -1,0 +1,30 @@
+<div class="manage-users-container">
+    <h2 class="heading">Manage Users</h2>
+  
+    <button class="add-user-btn" (click)="addUser()">+ Add New User</button>
+  
+    <table class="users-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.role }}</td>
+          <td>
+            <button class="action-btn edit-btn" (click)="editUser(user)">Edit</button>
+            <button class="action-btn delete-btn" (click)="deleteUser(user)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

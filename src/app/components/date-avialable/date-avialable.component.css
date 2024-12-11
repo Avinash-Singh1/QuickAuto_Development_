@@ -1,0 +1,17 @@
+/* styles.css or component-specific styles */
+.example-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .successbtn{
+    height: 55px;
+    margin: 2px;
+    cursor: pointer;
+  }

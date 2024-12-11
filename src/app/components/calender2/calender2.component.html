@@ -1,0 +1,48 @@
+<div class="container" >
+      <div 
+        class="navigation" 
+        style="display: flex; background-color: red;  justify-content: space-evenly;">
+        <input type="button" value="Previous" (click)="navigateMonth(-1)">
+        <h3>{{ currentMonthName }} {{ currentYear }}</h3>
+        <input type="button" value="Next" (click)="navigateMonth(1)">   
+      </div>
+      <div id="calendar">
+        <div class="month">
+          <div 
+            *ngFor="let day of daysInMonth" 
+            [ngClass]="isUnavailable(day) ? 'red' : 'green'"
+            (click)="onDateClick(day)">
+            {{ day.getDate() }}
+          </div>
+        </div>
+      </div>
+    
+  
+    <div id="schedule-section">
+      <h4>Schedule for Selected Date</h4>
+      <div *ngIf="schedules.length > 0; else noSchedules">
+        <div *ngFor="let schedule of schedules">
+          From {{ schedule.start_time }} to {{ schedule.end_time }}
+        </div>
+      </div>
+      <ng-template #noSchedules>
+        <p>No schedules for this date.</p>
+      </ng-template>
+    </div>
+  
+    <form *ngIf="showBookingForm" (ngSubmit)="onBookingSubmit()" id="booking-form" >
+      <h2>Confirm Booking</h2>
+      <p>Selected Date: <span>{{ selectedDate }}</span></p>
+      <label for="time">Enter Time Slot:</label>
+      <input type="time" id="selected-time" [(ngModel)]="selectedTime" required name="time">
+      <br><br>
+      <button 
+        type="submit" 
+        style="background-color: rgb(114, 114, 211); padding: 4px; border-radius: 5px;">
+        Submit Booking
+      </button>
+     
+    </form>
+    
+  </div>
+  

@@ -1,0 +1,76 @@
+#calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+  #calendar{
+    background-color: #007bff;
+    border-radius: 4px;
+   
+  }
+  
+  .month {
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+ 
+  }
+  
+   h3 {
+    margin-bottom: 10px;
+    background-color: green;
+    text-align: center;
+  }
+
+  
+  #calendar div.red {
+    background-color: #f88;
+    cursor: not-allowed;
+  }
+  
+  #calendar div.green {
+    background-color: #8f8;
+    cursor: pointer;
+  }
+  
+  #prev-month, #next-month {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+
+  }
+  
+  #prev-month:hover, #next-month:hover {
+    background-color: #0056b3;
+  }
+  #schedule-section, #booking-form{
+    text-align: center;
+    background-color: #f88;
+    /* height: 400px; */
+  
+  }
+  
+  
+  .month {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 5 columns, equal width */
+    grid-template-rows: repeat(5, 1fr);  /* 5 rows, equal height */
+    gap: 10px; /* Optional: Adds spacing between grid items */
+    height: 300px; /* Optional: Set a fixed height for the container */
+  }
+  
+  .green , .red  {
+    display: flex; /* Centers content inside each grid item */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc; /* Optional: Adds a border around each cell */
+    border-radius: 5px; /* Optional: Adds rounded corners to each cell */
+     /* Optional: Adds a background color */
+  }
+  

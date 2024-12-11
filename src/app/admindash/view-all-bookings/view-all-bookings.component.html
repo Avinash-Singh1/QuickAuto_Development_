@@ -1,0 +1,32 @@
+<div class="view-bookings-container">
+  <h2 class="heading">View All Bookings</h2>
+
+  <div class="table-container">
+      <table class="bookings-table">
+          <thead>
+              <tr>
+                  <th>#</th>
+                  <th>Booking ID</th>
+                  <th>User</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let booking of bookings; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ booking.id }}</td>
+                  <td>{{ booking.user }}</td>
+                  <td>{{ booking.date | date:'short' }}</td>
+                  <td>{{ booking.status }}</td>
+                  <td>
+                      <button class="action-btn view-btn" (click)="viewBooking(booking)">View</button>
+                      <button class="action-btn edit-btn" (click)="editBooking(booking)">Edit</button>
+                      <button class="action-btn delete-btn" (click)="deleteBooking(booking)">Delete</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

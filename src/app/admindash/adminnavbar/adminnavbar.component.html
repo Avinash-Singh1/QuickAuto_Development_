@@ -1,0 +1,48 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0d6efd;">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/admindash">
+            <img src="assets/images/auto.gif" alt="Logo" class="navbar-logo" width="80" style="border-radius: 4px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <p class="nav-link active" aria-current="page" >{{user_email}}</p>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/admindash">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/manageUsers">Mana Users</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link active"  routerLink="/viewallbookings">View AllBookings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active"  routerLink="/manageTickets">Manage Tickets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active"  routerLink="/openSettings">Settings</a>
+                </li>
+             
+                <li class="nav-item">
+                    <a class="nav-link active"  routerLink="/managePayments">Manage Payments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active"  routerLink="/viewAnalytics">View Analytics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active"  (click)="Logout()">Log Out</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+  </nav>
+  

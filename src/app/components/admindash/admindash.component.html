@@ -1,0 +1,115 @@
+<div class="container mt-4">
+  <div class="options row text-center">
+    <!-- Manage Users -->
+    <div class="col-4 mb-3">
+      <button class="service-btn w-100" (click)="manageUsers()">
+        <div class="service-icon">
+          <i class="fas fa-users-cog"></i>
+        </div>
+        <div>Manage Users</div>
+      </button>
+    </div>
+
+    <!-- View All Bookings -->
+    <div class="col-4 mb-3">
+      <button class="service-btn w-100" (click)="ManageBookings()">
+        <div class="service-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div>Manage Bookings</div>
+      </button>
+    </div>
+    <div class="col-4 mb-3">
+      <button class="service-btn w-100" (click)="NotAvailable()">
+        <div class="service-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div>Manage Not Available</div>
+      </button>
+    </div>
+
+    <div class="col-4 mb-3">
+      <button class="service-btn w-100" (click)="viewAllBookings()">
+        <div class="service-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div>View All Bookings</div>
+      </button>
+    </div>
+
+    <!-- Generate Reports -->
+    <div class="col-4 mb-3">
+      <button class="service-btn w-100" (click)="generateReports()">
+        <div class="service-icon">
+          <i class="fas fa-file-alt"></i>
+        </div>
+        <div>Generate Reports</div>
+      </button>
+    </div>
+
+    <!-- Manage Tickets -->
+    <div class="col-4 mb-3">
+      <button class="service-btn w-100" (click)="manageTickets()">
+        <div class="service-icon">
+          <i class="fas fa-ticket-alt"></i>
+        </div>
+        <div>Manage Tickets</div>
+      </button>
+    </div>
+
+    <!-- Settings -->
+    <div class="col-4 mb-3">
+      <button class="service-btn w-100" (click)="openSettings()">
+        <div class="service-icon">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <div>Settings</div>
+      </button>
+    </div>
+
+    <!-- Manage Payments -->
+    <div class="col-4 mb-3">
+      <button class="service-btn w-100" (click)="managePayments()">
+        <div class="service-icon">
+          <i class="fas fa-credit-card"></i>
+        </div>
+        <div>Manage Payments</div>
+      </button>
+    </div>
+
+    <!-- Feedback & Support -->
+    <div class="col-4 mb-3">
+      <button class="service-btn w-100" (click)="feedbackSupport()">
+        <div class="service-icon">
+          <i class="fas fa-headset"></i>
+        </div>
+        <div>Feedback & Support</div>
+      </button>
+    </div>
+
+    <!-- View Analytics -->
+    <div class="col-4 mb-3">
+      <button class="service-btn w-100" (click)="viewAnalytics()">
+        <div class="service-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div>View Analytics</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Admin Notifications Section -->
+  <div class="notifications-section text-center text-white" style="background-color: #6841b2;">
+    <h4>Admin Notifications</h4>
+    <p>You have 3 new notifications</p>
+    <h3>Click here to view</h3>
+  </div>
+</div>
+
+<!-- Bottom Navigation -->
+<div class="bottom-nav text-center">
+  <a href="#" class="nav-link">Dashboard</a>
+  <a href="#" class="nav-link">Reports</a>
+  <a href="#" class="nav-link">Users</a>
+  <a href="#" class="nav-link">Settings</a>
+</div>

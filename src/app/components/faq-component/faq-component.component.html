@@ -1,0 +1,38 @@
+<div class="container my-2" style="background-color: rgba(0, 0, 0, 0.589);color: white;padding: 5px;border-radius: 4px;">
+    <h2 class="text-center">Frequently Asked Questions</h2>
+  
+    <!-- FAQs Section -->
+    <div class="faq-section mt-4">
+      <div class="faq-item">
+        <h5 class="faq-question" (click)="toggleAnswer(1)">What is the process for booking an auto?</h5>
+        <p *ngIf="showAnswer[1]" class="faq-answer">You can book an auto through our app by selecting your source and destination, then choosing your travel date and time.</p>
+      </div>
+      <div class="faq-item">
+        <h5 class="faq-question" (click)="toggleAnswer(2)">How can I cancel my booking?</h5>
+        <p *ngIf="showAnswer[2]" class="faq-answer">To cancel a booking, go to your bookings history and select the booking you wish to cancel.</p>
+      </div>
+      <div class="faq-item">
+        <h5 class="faq-question" (click)="toggleAnswer(3)">What payment methods are accepted?</h5>
+        <p *ngIf="showAnswer[3]" class="faq-answer">We accept various payment methods including credit cards, debit cards, and mobile wallets.</p>
+      </div>
+      <div class="faq-item">
+        <h5 class="faq-question" (click)="toggleAnswer(4)">Can I book an auto for someone else?</h5>
+        <p *ngIf="showAnswer[4]" class="faq-answer">Yes, you can book an auto for someone else by entering their details during the booking process.</p>
+      </div>
+    </div>
+  
+    <!-- Ask a Question Section -->
+    <div class="ask-question mt-5">
+      <h3 class="text-center">Have a Question? Ask Us!</h3>
+      <form #questionForm="ngForm" (ngSubmit)="submitQuestion(questionForm.value)">
+        <div class="form-group">
+          <label for="userQuestion">Your Question:</label>
+          <textarea id="userQuestion" class="form-control" rows="4" name="userQuestion" [(ngModel)]="userQuestion" required></textarea>
+        </div>
+        <div class="form-row justify-content-center" style="margin-top: 14px;">
+          <button type="submit" class="btn btn-primary">Submit Question</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

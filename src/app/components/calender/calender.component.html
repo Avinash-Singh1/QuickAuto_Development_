@@ -1,0 +1,33 @@
+<!-- <div class="calendar-container">
+    <div class="calendar-header">
+      <button (click)="prevMonth()">&#9664;</button>
+      <span>{{ currentMonth + 1 }}/{{ currentYear }}</span>
+      <button (click)="nextMonth()">&#9654;</button>
+    </div>
+    
+    <div class="calendar-grid">
+      <div *ngFor="let day of daysInMonth" class="calendar-day"
+           [ngClass]="{'available': isAvailable(day), 'unavailable': isUnavailable(day)}"
+           (click)="selectDate(day)">
+        {{ day.getDate() }}
+      </div>
+    </div>
+  </div> -->
+  
+
+  <div class="calendar">
+    <div class="calendar-header">
+      <button type="button" (click)="prevMonth()">&#9664;</button>
+      <span><strong>{{ currentMonth + 1 }}/{{ currentYear }}</strong></span>
+      <button type="button" (click)="nextMonth()">&#9654;</button>
+    </div>
+    
+    <div class="calendar-grid">
+      <div *ngFor="let day of daysInMonth" class="calendar-day"
+           [ngClass]="{'available': isAvailable(day), 'unavailable': isUnavailable(day)}"
+           (click)="selectDate(day)">
+        {{ day.getDate() }}
+      </div>
+    </div>
+  </div>
+  

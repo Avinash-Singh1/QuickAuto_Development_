@@ -1,0 +1,71 @@
+:root {
+    --primary-bg: #1d1d1d;
+    --secondary-bg: #333;
+    --hover-bg: #red; /* New color for hover (darker shade) */
+    --text-color: #fff;
+  }
+  
+  body {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .metro-header {
+    background-color: var(--secondary-bg);
+    padding: 15px;
+  }
+  
+  .service-btn {
+    background-color: #dc612d;
+    color: white;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .service-btn:hover {
+    background-color: rgb(236, 214, 71); /* Change color on hover */
+  }
+  
+  .service-icon {
+    font-size: 1.5rem;
+  }
+  
+  .notifications-section {
+    background-color: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    padding: 10px 0;
+  }
+  
+  .bottom-nav a {
+    color: var(--text-color);
+    width: 25%;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bottom-nav a:hover {
+    background-color: var(--hover-bg); /* Change color on hover */
+  }
+  
+  .options {
+    padding: 8px 4px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.643);
+  }
+  

@@ -1,0 +1,30 @@
+
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0d6efd;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    z-index: 1;
+}
+
+.bottom-menu a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    flex: 1;
+}
+
+.bottom-menu a i {
+    font-size: 24px; /* Adjust the icon size */
+    display: block;
+    margin: 0 auto; /* Center the icon */
+}
+
+.bottom-menu a:hover {
+    color: #555;
+}
+

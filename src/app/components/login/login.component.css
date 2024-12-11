@@ -1,0 +1,73 @@
+ /* Full height and responsive styles */
+ body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 80vh; /* Full viewport height */
+    padding: 20px; /* Add some padding for smaller screens */
+}
+
+.card {
+    width: 100%; /* Full width on mobile */
+    max-width: 400px; /* Max width for larger screens */
+    border-radius: 15px;
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0;
+}
+
+.form-group label {
+    font-size: 1.5rem; /* Larger font size for labels */
+}
+
+.form-control {
+    font-size: 1rem; /* Larger font size for input fields */
+}
+
+button {
+    width: 100%;
+    font-size: 1.2rem; /* Larger font size for buttons */
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 2rem; /* Size of social media icons */
+    color: #333; /* Color of icons */
+    text-decoration: none; /* Remove underline */
+}
+
+.social-icon:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+@media (max-width: 576px) {
+    .card {
+        height: auto; /* Adjust height to auto for smaller screens */
+        margin: 0; /* Remove top margin to center vertically */
+        padding: 0; /* Add padding inside the card */
+    }
+
+    .form-group label {
+        font-size: 1.5rem; /* Adjust label font size */
+    }
+
+    .form-control {
+        font-size: 1.5rem; /* Adjust input font size */
+    }
+
+    button {
+        font-size: 1.5rem; /* Adjust button font size */
+    }
+
+    .container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}

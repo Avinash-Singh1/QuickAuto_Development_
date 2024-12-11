@@ -1,0 +1,146 @@
+.manage-users-container {
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+
+.add-user-btn {
+  display: inline-block;
+  background-color: #56c728;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.add-user-btn:hover {
+  background-color: #4caf50;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  table-layout: fixed; /* Ensures columns don't overflow */
+}
+
+.users-table th,
+.users-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+  word-wrap: break-word; /* Prevents long words from overflowing */
+}
+
+.users-table th {
+  background-color: #333;
+  color: white;
+}
+
+.users-table td {
+  background-color: white;
+}
+
+.action-btn {
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #2196f3;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #1976d2;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .manage-users-container {
+    padding: 15px;
+  }
+
+  .heading {
+    font-size: 18px;
+  }
+
+  .add-user-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .users-table {
+    font-size: 14px;
+  }
+
+  .action-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .users-table td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .users-table {
+    font-size: 12px;
+  }
+
+  .heading {
+    font-size: 16px;
+  }
+
+  .add-user-btn {
+    width: 100%; /* Make button take full width on smaller screens */
+    padding: 10px;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 8px;
+  }
+
+  .action-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .users-table {
+    overflow-x: auto; /* Adds horizontal scrolling on very small screens */
+  }
+}

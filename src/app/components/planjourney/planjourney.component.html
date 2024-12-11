@@ -1,0 +1,47 @@
+<!-- Loader (will be visible while isLoading is true) -->
+<div *ngIf="isLoading" class="loader-container">
+  <div class="loader"></div>
+</div>
+
+<!-- Input Fields and Buttons -->
+<div class="controls">
+  <!-- Source Input -->
+  <div class="input-container">
+    <input type="text" class="input-field" placeholder="Enter Source" [(ngModel)]="source" (input)="onSourceInput()" />
+    <div *ngIf="sourceSuggestions.length > 0" class="autocomplete-list">
+      <div *ngFor="let suggestion of sourceSuggestions" class="autocomplete-item" (click)="selectSource(suggestion)">
+        {{ suggestion.description }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Destination Input -->
+  <div class="input-container">
+    <input type="text" class="input-field" placeholder="Enter Destination" [(ngModel)]="destination" (input)="onDestinationInput()" />
+    <div *ngIf="destinationSuggestions.length > 0" class="autocomplete-list">
+      <div *ngFor="let suggestion of destinationSuggestions" class="autocomplete-item" (click)="selectDestination(suggestion)">
+        {{ suggestion.description }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Search and Book Buttons -->
+  <div class="btndiv">
+    <button class="btn-primary" (click)="getDirections()">Search</button>
+    <button class="btn-secondary" (click)="FillAllDetails()">Book</button>
+  </div>
+
+  <!-- Display Distance and Fare -->
+  <div *ngIf="distance && fare" class="info-container">
+    <div><span>Distance:</span> {{ distance }} km</div>
+    <div><span>Fare:</span> {{ fare | currency:'INR':'symbol':'1.2-2' }}</div>
+  </div>
+</div>
+
+<!-- Google Map: Display only when the API is loaded -->
+<div *ngIf="apiLoaded" class="map-container" style="margin-top: 14px;">
+  <google-map [options]="options" height="100%" width="100%">
+    <map-marker *ngFor="let marker of markers" [position]="marker.position" [label]="marker.label"></map-marker>
+    <map-polyline [path]="polyline?.path" [options]="polyline"></map-polyline>
+  </google-map>
+</div>

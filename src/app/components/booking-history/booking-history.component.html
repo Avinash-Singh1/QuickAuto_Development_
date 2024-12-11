@@ -1,0 +1,33 @@
+<div class=" mt-2">
+  
+    <div class="card-header bg-primary text-white text-center mb-0">
+        <div class="previous text-center ">Previous Bookings</div>
+     </div>
+    <div class="table-responsive mt-0">
+        <table class="table table-bordered table-hover ">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through the bookings -->
+                <tr *ngFor="let booking of bookingHistory">
+                    <td>{{ booking.id }}</td>
+                    <td>{{ booking.source }}</td>
+                    <td>{{ booking.destination }}</td>
+                    <td>{{ booking.date | date: 'shortDate' }}</td>
+                    <td>{{ booking.time }}</td>
+                    <td>
+                        <span class="badge" [ngClass]="getStatusClass(booking.status)">{{ booking.status }}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

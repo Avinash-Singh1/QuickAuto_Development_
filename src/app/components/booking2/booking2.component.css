@@ -1,0 +1,302 @@
+#calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+  #calendar{
+    background-color: #007bff;
+    border-radius: 4px;
+   
+  }
+  
+  .month {
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+ 
+  }
+  
+   h3 {
+    margin-bottom: 10px;
+    /* background-color: green; */
+    text-align: center;
+  }
+
+  
+  #calendar div.red {
+    background-color: #f88;
+    cursor: not-allowed;
+  }
+  
+  #calendar div.green {
+    background-color: #8f8;
+    cursor: pointer;
+  }
+  
+  #prev-month, #next-month {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+
+  }
+  
+  #prev-month:hover, #next-month:hover {
+    background-color: #0056b3;
+  }
+  #schedule-section, #booking-form{
+    text-align: center;
+    background-color: #f88;
+    /* height: 400px; */
+  
+  }
+  
+  
+  .month {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 5 columns, equal width */
+    grid-template-rows: repeat(5, 1fr);  /* 5 rows, equal height */
+    gap: 10px; /* Optional: Adds spacing between grid items */
+    height: 300px; /* Optional: Set a fixed height for the container */
+  }
+  
+  .green , .red  {
+    display: flex; /* Centers content inside each grid item */
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc; /* Optional: Adds a border around each cell */
+    border-radius: 5px; /* Optional: Adds rounded corners to each cell */
+     /* Optional: Adds a background color */
+  }
+   /* calender css ends here  */
+
+   /* only for the bookings  */
+   /* Padding or margin for the bottom to prevent button overlap */
+.container {
+  padding-bottom: 80px; /* Space for the bottom menu */
+}
+
+.submit-button-wrapper {
+  position: sticky; /* Make the button sticky */
+  bottom: 80px; /* Adjust based on your bottom menu height */
+  z-index: 1500; /* Ensure it’s above other elements */
+}
+
+@media (max-width: 576px) {
+.container {
+    padding: 10px; /* Add some padding for smaller screens */
+    padding-bottom: 80px; /* Space for bottom menu */
+}
+
+.card {
+    border-radius: 10px; /* Keep rounded corners */
+    margin: 0; /* Remove margins for full-width cards */
+}
+
+.card-header h2 {
+    margin-top: 55px; /* Ensure heading has space above */
+    font-size: 1.5rem; /* Adjust heading size */
+    margin-bottom: 0px;
+}
+
+.myinputfields {
+    height: 50px; /* Adjust height for input fields */
+    font-size: 0.9rem; /* Slightly smaller font for inputs */
+}
+
+.btn {
+    width: 90%; /* Full-width button for better touch targets */
+    font-size: 1rem; /* Increase button font size for readability */
+    padding: 12px; /* Increase padding for better touch */
+}
+label{font-weight: 420;}
+
+.form-row {
+    margin-bottom: 15px; /* Space between form rows */
+}
+
+/* Adjust for the sticky button */
+.submit-button-wrapper {
+    bottom: 70px; /* Adjust this based on your footer or navbar height */
+}
+}
+.scrollable-form-container {
+  max-height: 100vh; /* Adjust this based on available space */
+  overflow-y: auto; /* Enables vertical scrolling */
+  padding: 15px; /* Optional padding for inner spacing */
+}
+.backbtn{
+  left: 20px; 
+  top: 5px;
+}
+
+.hide-scrollbar {
+  max-height: 680px; /* Adjust to your needs */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+
+  /* Hide scrollbar */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+
+  /* Scrollbar for Webkit (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .scrollable-form-container {
+      max-height: 75vh; /* Adjust height for smaller screens */
+  }
+  .box{
+    height: 65px;
+  }
+
+  .submitbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .fare_and_distance{
+      display: flex;
+      gap: 4px;
+    }
+}
+
+   /* only for the bookings ends */
+  
+   
+   .time-container {
+    display: flex;
+    gap: 20px; /* Adds space between the items */
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ddd; /* Optional border for structure */
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.time-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Adds space between the label and input */
+}
+
+.time-item label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333; /* Darker color for better readability */
+}
+
+.time-item input[type="time"] {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.time-item input[type="time"]:focus {
+    border-color: #007bff; /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+.time-head {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;    /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: center;      /* Center-align text */
+  padding: 20px;
+  border: 1px solid #ddd;  /* Optional border for structure */
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.time-head h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333; /* Darker color for readability */
+}
+
+.time-head p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+}
+
+.time-head span {
+  font-weight: 500;
+  color: #007bff; /* Highlighted color for the date */
+}
+
+/* calender navigation buttn  */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.nav-button:active {
+  background-color: #004085;
+  transform: scale(1); /* Reset zoom on click */
+}
+
+.month-display {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+
+/* selected dates color  */
+.red {
+  background-color: red;
+  color: white;
+}
+
+.green {
+  background-color: green;
+  color: white;
+}
+
+.selected {
+  background-color: blue;
+  color: white;
+  border: 2px solid darkblue;
+  border-radius: 50%;
+}

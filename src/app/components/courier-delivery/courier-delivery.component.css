@@ -1,0 +1,50 @@
+/* General Styles for Courier Delivery Page */
+.container {
+    max-width: 800px; /* Limit the maximum width of the container */
+    margin: auto; /* Center the container */
+    padding: 20px; /* Padding for spacing */
+}
+
+.card {
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.card-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 20px; /* Adequate padding */
+}
+
+h4 {
+    margin: 0; /* Remove margin for better centering */
+}
+
+.form-group label {
+    font-weight: bold; /* Bold labels for better readability */
+}
+
+.form-control {
+    border-radius: 5px; /* Rounded corners for inputs */
+    box-shadow: none; /* Remove default shadow */
+}
+
+/* Button styling */
+button.btn {
+    width: 100%; /* Full-width button for better UX */
+    font-size: 1.1rem; /* Slightly larger font size for the button */
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    h4 {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+}

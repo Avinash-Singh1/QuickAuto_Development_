@@ -1,0 +1,126 @@
+<div class="container my-2">
+    <div class="card shadow-lg hide-scrollbar"  style="max-height: 680px; overflow-y: auto; border: 1px solid #ccc;">
+      
+      <div class="back-button-box card-header text-center bg-primary text-white ">
+        <button class="backbtn btn btn-outline-light position-absolute" (click)="goBack()">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+        <h2>Travel Auto Booking</h2>
+      </div>
+      <div class="scrollable-form-container">
+      <form>
+          <!-- Source and Destination Dropdown -->
+        
+  
+          <!-- Date Picker replaced by Custom Calendar -->
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label style="display: flex;  justify-content: space-evenly;" for="travelDate">Travel Date</label>
+                  <div class="calender-container" >
+                    <div 
+                      class="navigation" 
+                      style="display: flex;  justify-content: space-evenly;">
+                      <input type="button" value="Previous" (click)="navigateMonth(-1)">
+                      <h3>{{ currentMonthName }} {{ currentYear }}</h3>
+                      <input type="button" value="Next" (click)="navigateMonth(1)">   
+                    </div>
+                    <div id="calendar" style="padding-top: 22px;">
+                      <div class="month">
+                        <div 
+                          *ngFor="let day of daysInMonth" 
+                          [ngClass]="isUnavailable(day) ? 'red' : 'green'"
+                          (click)="onDateClick(day)">
+                          {{ day.getDate() }}
+                        </div>
+                      </div>
+                    </div>
+                
+                  <div id="schedule-section">
+                    <h4>Booked for Below Dates</h4>
+                    <div *ngIf="schedules.length > 0; else noSchedules">
+                      <div style="max-height: 200px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+                        <div *ngFor="let schedule of schedules">
+                          From {{ schedule.start_time }} to {{ schedule.end_time }}
+                        </div>
+                  
+                      </div>
+                    </div>
+                    
+                    <ng-template #noSchedules>
+                      <p>No schedules for this date.</p>
+                    </ng-template>
+                  </div>
+                
+                  <div *ngIf="showBookingForm" >
+                      <div class="time-head">
+                        <h2>Select Time</h2>
+                        <p style="font-size: large;font-weight: 400;">Selected Date: <span>{{ selectedDate }}</span></p>
+    
+                      </div>
+                   <div class="time-container" >
+                    <div class="time-item">
+                      <label for="time" style="font-size: large;font-weight: 400;">Start Time:</label>
+                      <input type="time" id="selected-time" [(ngModel)]="startTime"  required name="time">
+                    </div>
+                   
+                    <div class="time-item">
+                      <label for="time" style="font-size: large;font-weight: 400;">End Time:</label>
+                      <input type="time" id="selected-time" [(ngModel)]="endTime" required name="time">
+                    </div>
+                   </div>
+
+                   <div class="time-container" style="display: flex;">
+                        <button 
+                        type="submit" 
+                        class="btn btn-success btn-lg"
+                        (click)="Mark_Schedule()"
+                      >
+                        Submit Schedule
+                      </button>
+                      <button 
+                        type="submit" 
+                        class="btn btn-danger btn-lg"
+                        (click)="Mark_Not_Available()"
+                      >
+                        Not Available
+                      </button>
+                   </div>
+
+                    
+                  
+                  
+                  </div>
+                  
+                </div>
+            
+            </div>
+  
+  
+          
+            <!-- <div class="submitbtn m-2">
+              <button type="submit" class="btn btn-success btn-lg" [disabled]="!bookingForm.valid || !isTimeAvailable">Proceed to Pay</button>
+            </div> -->
+    
+            <!-- Alert for unavailable time -->
+          
+            <div *ngIf="!isTimeAvailable" class="alert alert-warning mt-2">
+              The selected time is not available. Please choose another time.
+            </div>
+            <div *ngIf="!isTimeAvailable"  style="visibility: hidden;">
+              The selected time is not available. Please choose another time.
+            </div>
+           
+
+          </div>
+  
+          <!-- Proceed to Pay Button -->
+   
+        </form>
+        <div class="box" style="height: 100px;">
+  
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
