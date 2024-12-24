@@ -4,33 +4,26 @@ This is a full-stack application built using Angular for the frontend and Node.j
 
 ## Table of Contents
 
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Running the Application](#running-the-application)
-- [Folder Structure](#folder-structure)
-- [API Endpoints](#api-endpoints)
-- [Screenshots](#screenshots)
-- [License](#license)
+
 
 ---
 
-## Features
+### <a id="auto"></a> 5. **QuickAuto Cab and Others (Some features have been discontinued due to cost issues).**
+ **Please Scroll and Book (Scrollable work in Progress).**
 
-- [List key features of the application, e.g., authentication, CRUD operations, etc.]
-
-## Technologies Used
-
-### Frontend:
-- Angular (v[insert version])
-- Angular CLI
-- RxJS
-
-### Backend:
-- Node.js (v[insert version])
-- Express.js
-- MongoDB (or other database system, e.g., PostgreSQL)
+   - **GitHub Repository**: [QuickAuto Cab GitHub Repo](https://github.com/Avinash-Singh1/Quick_Auto_Application)
+   - **Live Demo**: [Live Demo of QuickAuto Cab](https://test-k8td.onrender.com/planjourney) If Unable to log in on signup (Means RDS is Down..)
+   - **Description**: An application built with Angular, Gomaps Pro API, Node.js, and MySQL, focusing on efficient cab management and user interaction. 
+   - **User Roles**:
+      - **Admin**: Full control over users, bookings, and availability, with comprehensive dashboard access.
+      - **Customer**: Journey planning with source and destination selection using an interactive map, fare and distance calculation, and driver booking based on real-time availability.
+      - **Driver**: Ability to manage availability and view scheduled journeys.
+   - **Features**:
+      - Interactive map integration with Google Maps for seamless journey planning.
+      - Dynamic fare and distance calculation based on chosen routes.
+      - Real-time driver availability management and booking updates.
+      - Payment processing using **Razorpay** for secure transactions.
+      - Confirmation messages via **Twilio** for WhatsApp to notify customers of their booking status and appointment details.
 
 ## Prerequisites
 
@@ -85,18 +78,18 @@ Before running this project, ensure you have the following installed:
 ```
 project-root
 ├── backend
-│   ├── routes
+│   ├── users(routes)
 │   ├── models
-│   ├── controllers
-│   ├── server.js
+│   ├── auth
+│   ├── index.js
 │   └── package.json
-├── frontend
-│   ├── src
-│   │   ├── app
-│   │   ├── assets
-│   │   ├── environments
-│   │   └── main.ts
-│   └── angular.json
+
+| ├── src
+| │   ├── app
+| │   ├── assets
+| │   ├── environments
+| │   └── main.ts
+| └── angular.json
 └── README.md
 ```
 
@@ -114,9 +107,6 @@ project-root
 
 [Add more endpoints as needed.]
 
-## Screenshots
-
-Include screenshots of the application to give users a visual understanding of the project.
 
 ## License
 
@@ -132,4 +122,4 @@ Contributions are welcome! Please open an issue or submit a pull request with an
 
 ### Contact
 
-For questions or feedback, contact [your email or GitHub profile link].
+For questions or feedback, contact [aavinash.singgh@gmail.com].
